@@ -1,0 +1,137 @@
+
+
+backend AMI creation
+aws ec2 copy-image --source-image-id  ami-0b9ead30fc2e9edf4 --source-region us-east-1 --region us-east-1 --name "pm-boost-etl-1"
+
+ssh -i awscliutilities.pem ubuntu@]
+aws configure
+key ID and scered key ,,,, yes ,,,, resion name
+
+
+aws ec2 modify-instance-attribute --instance-id i-0ea05822320404483 --instance-type "{\"Value\": \"t2.small\"}"
+
+
+i-0d1fa75ecee936713
+
+aws ec2 create-tags --resources i-0d1fa75ecee936713 --tags Key=webserver,Value=  
+aws ec2 delete-tags --resources i-0d1fa75ecee936713 --tags Key=webserver,Value=pm-boost-etl-1
+
+o get the encrypted password
+
+This example gets the encrypted password.
+
+Command:
+
+aws ec2 get-password-data --instance-id i-0d1fa75ecee936713
+
+
+aws ec2 stop-instances --instance-ids i-0d1fa75ecee936713
+
+aws ec2 deregister-image --image-id ami-0087ea4399a699965
+Notes
+1. Connection with Sukamr in the tuesday for add
+
+
+
+aws resource-groups search-resources --
+
+
+ aws cloudformation list-stacks | grep "arn:aws:cloudformation:us-east-1:335945266965:stack/pm-av-es-prod-poc/27a8c720-b3d1-11e9-9fa5-0a545e22b5be"
+ aws cloudformation list-stacks
+
+aws cloudformation list-stacks > k
+
+
+aws cloudformation list-stacks
+aws cloudformation list-stacks > k
+
+command to check ec2 target group
+aws elbv2 describe-target-groups --target-group-arns arn:aws:elasticloadbalancing:ap-southeast-1:335945266965:targetgroup/authtoken-tg-dr/93f16aa3b0a1c8ff
+
+command to check
+aws rds describe-db-instances
+
+command to check parameter group
+aws rds describe-parameter-groups
+
+
+command to check s3
+aws s3 ls
+
+cmd list acm certificates
+aws acm list-certificates
+
+cmd for network interface
+aws ec2 describe-network-interfaces
+
+cmd for security group
+aws ec2 describe-security-groups
+
+cmd for snapshots
+aws ec2 describe-snapshots
+
+cmd for volumes
+aws ec2 describe-volumes
+
+cmd for clusters
+aws ecs list-clusters
+
+cmd for service
+aws ecs list-services, aws ecs list-services --cluster MyCluster
+ 
+cmd for task definitions
+aws ecs list-task-definitions
+
+cmd for elasticache
+aws elasticache describe-cache-clusters 
+
+cmd for eks describe-snapshots
+aws elasticache describe-snapshots
+
+cmd for elb 
+aws elbv2 describe-load-balancers
+
+cmd for es domain
+aws es describe-elasticsearch-domain
+
+
+cmd for event-buses
+ aws events list-event-buses
+
+cmd for event-rule
+aws events list-rules
+
+cmd for lambda function
+aws lambda list-functions
+
+cmd for log 
+aws logs describe-log-groups --log-group-name-prefix my-logs
+
+cmd for options-group
+aws rds describe-option-groups
+
+cmd for secrets managaer
+aws secretsmanager list-secrets
+
+cmd for sns
+ aws sns list-topics
+
+cmd for cloud alarm
+aws cloudwatch describe-alarms
+
+aws cognito-identity list-identity-pools --max-results 30
+
+cmf for ece rep
+aws ecr describe-repositories
+
+cmd for elbv2
+aws elbv2 describe-load-balancers
+
+aws elbv2 describe-target-groups \
+    --target-group-arns arn:aws:elasticloadbalancing:us-west-2:
+
+
+aws es list-domain-names
+
+Import certificate
+aws acm import-certificate --certificate file://www_assetiq_cbre_eu_cert.cer --certificate-chain file://Sectigo_IntermediateCA_Cert.crt --private-key file://privatekey.key
