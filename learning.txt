@@ -1,0 +1,12 @@
+I have learned today About 
+1.Auto scalling always attach tot the intst
+2. Always verify the pipeline once change the pipleline pool other wise revert
+
+12/10/2022-How to encrypted key with copying in ebs , modify permission and share to another account.
+           Snapshots encrypted with the AWS Managed CMK can't be shared. Specify another snapshot.
+https://www.youtube.com/watch?v=wtwUqKvSZDA  - For snapshot copy and ency
+https://www.youtube.com/watch?v=c0qxR67AWtU  - For ami copy and share
+
+Modified permission and shared to the pulse-use-nonprod 
+
+Take backup of pipeline and make it run
